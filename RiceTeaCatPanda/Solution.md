@@ -5,7 +5,9 @@ Ecbf1HZ_kd8jR5K?[";(7;aJp?[4>J?Slk3<+n'pF]W^,F>._lB/=r
 #### Solution : </br>
 I observed special characters in the string, so I tried Base85 decode.
 
+```
 Flag : rtcp{uH_JAk3_w3REn't_y0u_4t_Th3_uWust0r4g3}
+```
 
 ## Forensics:
 1. BTS-Crazed
@@ -13,7 +15,9 @@ Flag : rtcp{uH_JAk3_w3REn't_y0u_4t_Th3_uWust0r4g3}
 An audio [file](files/Save\ Me.mp3) was provided.
 #### Solution : </br>
 Used strings to obtain the flag.
+```
 Flag : rtcp{j^cks0n_3ats_r1c3}
+```
 
 2. cat-chat
 #### Problem description : </br>
@@ -27,12 +31,15 @@ The text consisted of three repeating words `nya`, `meow` and `purr`. It hints o
 
 The discord channel, was filled with encoded chats by two bots. So, I converted 'rtcp' to morse code, encoded them and searched for the text in discord to get flag.
 
+```
 Flag : rtcp{th15_1z_a_c4t_ch4t_n0t_a_m3m3_ch4t}
+```
 
 3. BASmati ricE 64
 #### Problem description : </br>
 There's a flag in that bowl somewhere...
 ![image](files/rice-bowl.jpg)
+
 Replace all zs with _ in your flag and wrap in rtcp{...}.
 #### Solution : </br>
 Using steghide, we get a txt file.
@@ -51,7 +58,9 @@ s0m3t1m35zth1ng5zAr3z3nc0D3d
 ```
 Don't forget to replace the z's with _'s
 
+```
 Flag : rtcp{s0m3t1m35_th1ng5_Ar3_3nc0D3d}
+```
 
 ## Misc:
 1. Strong Password
@@ -60,7 +69,9 @@ Eat, Drink, Pet, Hug, Repeat!
 #### Solution : </br>
 All four words hint to the event title RiceTeaCatPanda.
 
+```
 Flag : rtcp{rice_tea_cat_panda}
+```
 
 ## Web:
 1. Robots. Yeah, I know, pretty obvious.
@@ -69,7 +80,9 @@ So, we know that Delphine is a cook. A wonderful one, at that. But did you know 
 #### Solution : </br>
 Quite obviously a hint at `robots.txt` file. I went to https://riceteacatpanda.wtf/robots.txt to find two files `flag` and `robot-nurses`. https://riceteacatpanda.wtf/flag didn't give the flag so I tried https://riceteacatpanda.wtf/robot-nurses to obtain the flag.
 
+```
 Flag : rtcp{r0b0t5_4r3_g01ng_t0_t4k3_0v3r_4nd_w3_4r3_s0_scr3w3d}
+```
 
 ## General: 
 1. Basic C4
@@ -78,7 +91,9 @@ A txt [file](files/da_bomb.txt) was provided and hints were provided stating the
 #### Solution : </br>
 Decoding the base64 text in the txt file led to nothing(but an obvious remark that we are not supposed to base64 decode it). Some google searches led to http://www.cccc.io/. Uploaded the txt file to get the flag.
 
-Flag : rtcp{c42CW3TbiGhvptM36RJJ9ScctgkskjvZPo6dG8JexzZRvzQR6hwovZJLDkYK5pZ6cq9e7fX1ShUiYUdM7H1Uuqj64G}
+```
+Flag : rtcp`{c42CW3TbiGhvptM36RJJ9ScctgkskjvZPo6dG8JexzZRvzQR6hwovZJLDkYK5pZ6cq9e7fX1ShUiYUdM7H1Uuqj64G
+```
 
 2. NO¯Γ̶ IX
 #### Problem description : </br>
@@ -92,7 +107,9 @@ meow = Totally [Chall Title]
 #### Solution : </br>
 Low points hinted that it should not be too complicated. So, I tried Roman numeral conversions to get `100 - hex(IX)` = `100 - hex(9)` = `f7`
 
+```
 Flag : rtcp{f7}
+```
 
 2. Treeee
 #### Problem description : </br>
@@ -134,7 +151,9 @@ $ find -size 1496 -delete
 $ find -size 1718 -delete
 ```
 
+```
 Flag : RTCP{MEOW_SHARP_PIDGION_RICE_TREE}
+```
 
 3. Motivational Message
 #### Problem description : </br>
@@ -166,4 +185,6 @@ $ file.txt xxd -p -c1 | tac | xxd -p -r > rev_file.png
 ```
 I used `zsteg` to get flag.
 
+```
 Flag : rtcp{^ww3_1_b3l31v3_1n_y0u!}
+```
